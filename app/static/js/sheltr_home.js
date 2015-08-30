@@ -12,6 +12,11 @@ $(function () {
 		$('.circle#2').animate({top:"25%"}, 500);
 		$('.circle#3').animate({left:"67%"}, 500);
 		$('.circle#4').animate({top:"75%"}, 500);
-		$('#center-circle').hide(500);
+		$('#center-circle').animate({height:"0px", width:"0px"}, function(){
+             $("#center-circle").hide(500);
+        });
+        $(".circle").hover(function() {
+  			$(this).css("transition",".5s")
+		});
 	}
 });
